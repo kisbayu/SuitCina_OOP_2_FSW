@@ -40,21 +40,25 @@ function Player(){
             stat.innerHTML = "PLAYER 1 <br> WIN";
             stat.classList.add('rectangle');
             stat.style.backgroundColor = "rgb(76, 150, 84)";
+            console.log("==PLAYER 1 WIN==");
         }
         if (status == "lose") {
             stat.innerHTML = "COM <br> WIN"
             stat.classList.add('rectangle');
             stat.style.backgroundColor = "rgb(76, 150, 84)";
+            console.log("==COMPUTER WIN==");
         }
         if (status == "draw") {
             stat.innerHTML = "DRAW";
             stat.classList.add('rectangle');
             stat.style.backgroundColor = "rgb(3, 91, 12)";
+            console.log("== DRAW ==");
         }
         if (status == "") {
             stat.innerHTML = "VS";
             stat.classList.remove('rectangle');
             stat.style.backgroundColor = "rgb(156, 131, 95)";
+            console.log("==RESET MATCH==");
         }
     }
 }
@@ -97,41 +101,41 @@ let computer = new Computer();
 
 document.getElementById("player_batu").onclick = function(){
     player1.Choose = "batu";
+    console.log("player 1 = "+player1.Choose);
     player1.changeBG();
     computer.Choose = computer.randomPick();
+    console.log("computer = "+computer.Choose);
     player1.Play();
     computer.changeBG();
-    console.log("player 1 = "+player1.Choose);
-    console.log("computer = "+computer.Choose)
 }
 
 document.getElementById("player_kertas").onclick = function(){
     player1.Choose = "kertas";
+    console.log("player 1 = "+player1.Choose);
     player1.changeBG();
     computer.Choose = computer.randomPick();
+    console.log("computer = "+computer.Choose);
     player1.Play();
     computer.changeBG();
-    console.log("player 1 = "+player1.Choose);
-    console.log("computer = "+computer.Choose)
 }
 
 document.getElementById("player_gunting").onclick = function(){
     player1.Choose = "gunting";
+    console.log("player 1 = "+player1.Choose);
     player1.changeBG();
     computer.Choose = computer.randomPick();
+    console.log("computer = "+computer.Choose);
     player1.Play();
     computer.changeBG();
-    console.log("player 1 = "+player1.Choose);
-    console.log("computer = "+computer.Choose)
 }
 
 document.getElementById("refresh").onclick = function(){
     player1.Choose = "";
+    console.log("player 1 = "+player1.Choose);
     player1.changeBG();
     computer.Choose = "";   
+    console.log("computer = "+computer.Choose);
     computer.changeBG();
     player1.Play();
     console.log("refresh");
-    console.log("player 1 = "+player1.Choose);
-    console.log("computer = "+computer.Choose)
 }
